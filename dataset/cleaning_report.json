@@ -1,0 +1,196 @@
+{
+  "name.basics.csv": {
+    "rows_before": 1000000,
+    "rows_after": 1000000,
+    "rows_removed": 0,
+    "missing_before": {
+      "nconst": 0,
+      "primaryName": 2,
+      "birthYear": 955941,
+      "deathYear": 983218,
+      "primaryProfession": 201320,
+      "knownForTitles": 118677
+    },
+    "missing_after": {
+      "nconst": 0,
+      "primaryName": 2,
+      "birthYear": 956104,
+      "deathYear": 983274,
+      "primaryProfession": 201320,
+      "knownForTitles": 118677
+    },
+    "dtypes_after": {
+      "nconst": "string",
+      "primaryName": "string",
+      "birthYear": "float64",
+      "deathYear": "float64",
+      "primaryProfession": "string",
+      "knownForTitles": "string"
+    }
+  },
+  "title.akas.csv": {
+    "rows_before": 1000000,
+    "rows_after": 1000000,
+    "rows_removed": 0,
+    "missing_before": {
+      "titleId": 0,
+      "ordering": 0,
+      "title": 0,
+      "region": 223132,
+      "language": 328454,
+      "types": 693755,
+      "attributes": 994467,
+      "isOriginalTitle": 0
+    },
+    "missing_after": {
+      "titleId": 0,
+      "ordering": 0,
+      "title": 0,
+      "region": 223132,
+      "language": 328454,
+      "types": 693755,
+      "attributes": 994467,
+      "isOriginalTitle": 0
+    },
+    "dtypes_after": {
+      "titleId": "string",
+      "ordering": "Int64",
+      "title": "string",
+      "region": "string",
+      "language": "string",
+      "types": "string",
+      "attributes": "string",
+      "isOriginalTitle": "Int64"
+    }
+  },
+  "title.basics.csv": {
+    "rows_before": 1000000,
+    "rows_after": 1000000,
+    "rows_removed": 0,
+    "missing_before": {
+      "tconst": 0,
+      "titleType": 0,
+      "primaryTitle": 2,
+      "originalTitle": 2,
+      "isAdult": 0,
+      "startYear": 117954,
+      "endYear": 987319,
+      "runtimeMinutes": 640510,
+      "genres": 43001
+    },
+    "missing_after": {
+      "tconst": 0,
+      "titleType": 0,
+      "primaryTitle": 2,
+      "originalTitle": 2,
+      "isAdult": 0,
+      "startYear": 117954,
+      "endYear": 987319,
+      "runtimeMinutes": 640575,
+      "genres": 43001
+    },
+    "dtypes_after": {
+      "tconst": "string",
+      "titleType": "string",
+      "primaryTitle": "string",
+      "originalTitle": "string",
+      "isAdult": "Int64",
+      "startYear": "float64",
+      "endYear": "float64",
+      "runtimeMinutes": "Int64",
+      "genres": "string"
+    }
+  },
+  "title.crew.csv": {
+    "rows_before": 1000000,
+    "rows_after": 1000000,
+    "rows_removed": 0,
+    "missing_before": {
+      "tconst": 0,
+      "directors": 440078,
+      "writers": 490604
+    },
+    "missing_after": {
+      "tconst": 0,
+      "directors": 440078,
+      "writers": 490604
+    },
+    "dtypes_after": {
+      "tconst": "string",
+      "directors": "string",
+      "writers": "string"
+    }
+  },
+  "title.episode.csv": {
+    "rows_before": 1000000,
+    "rows_after": 1000000,
+    "rows_removed": 0,
+    "missing_before": {
+      "tconst": 0,
+      "parentTconst": 0,
+      "seasonNumber": 206204,
+      "episodeNumber": 206204
+    },
+    "missing_after": {
+      "tconst": 0,
+      "parentTconst": 0,
+      "seasonNumber": 206204,
+      "episodeNumber": 206915
+    },
+    "dtypes_after": {
+      "tconst": "string",
+      "parentTconst": "string",
+      "seasonNumber": "float64",
+      "episodeNumber": "float64"
+    }
+  },
+  "title.principals.csv": {
+    "rows_before": 1000000,
+    "rows_after": 1000000,
+    "rows_removed": 0,
+    "missing_before": {
+      "tconst": 0,
+      "ordering": 0,
+      "nconst": 0,
+      "category": 0,
+      "job": 809085,
+      "characters": 511595
+    },
+    "missing_after": {
+      "tconst": 0,
+      "ordering": 0,
+      "nconst": 0,
+      "category": 0,
+      "job": 809085,
+      "characters": 511595
+    },
+    "dtypes_after": {
+      "tconst": "string",
+      "ordering": "Int64",
+      "nconst": "string",
+      "category": "string",
+      "job": "string",
+      "characters": "string"
+    }
+  },
+  "title.ratings.csv": {
+    "rows_before": 1000000,
+    "rows_after": 1000000,
+    "rows_removed": 0,
+    "missing_before": {
+      "tconst": 0,
+      "averageRating": 0,
+      "numVotes": 0
+    },
+    "missing_after": {
+      "tconst": 0,
+      "averageRating": 0,
+      "numVotes": 0
+    },
+    "dtypes_after": {
+      "tconst": "string",
+      "averageRating": "float64",
+      "numVotes": "Int64"
+    }
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "name.basics.csv": {
+    "rows": 1000000,
+    "columns": 6,
+    "column_names": [
+      "nconst",
+      "primaryName",
+      "birthYear",
+      "deathYear",
+      "primaryProfession",
+      "knownForTitles"
+    ],
+    "missing_values": {
+      "nconst": 0,
+      "primaryName": 2,
+      "birthYear": 956104,
+      "deathYear": 983274,
+      "primaryProfession": 201320,
+      "knownForTitles": 118677
+    },
+    "duplicate_rows": 0,
+    "numeric_summary": {
+      "birthYear": {
+        "count": 43896.0,
+        "mean": 1955.2697284490614,
+        "std": 31.528898691119277,
+        "min": 1850.0,
+        "25%": 1934.0,
+        "50%": 1961.0,
+        "75%": 1980.0,
+        "max": 2025.0
+      },
+      "deathYear": {
+        "count": 16726.0,
+        "mean": 1995.9973693650604,
+        "std": 26.003490491528694,
+        "min": 1851.0,
+        "25%": 1982.0,
+        "50%": 2004.0,
+        "75%": 2017.0,
+        "max": 2026.0
+      }
+    }
+  },
+  "title.akas.csv": {
+    "rows": 1000000,
+    "columns": 8,
+    "column_names": [
+      "titleId",
+      "ordering",
+      "title",
+      "region",
+      "language",
+      "types",
+      "attributes",
+      "isOriginalTitle"
+    ],
+    "missing_values": {
+      "titleId": 0,
+      "ordering": 0,
+      "title": 0,
+      "region": 223132,
+      "language": 328454,
+      "types": 693755,
+      "attributes": 994467,
+      "isOriginalTitle": 0
+    },
+    "duplicate_rows": 0,
+    "numeric_summary": {
+      "ordering": {
+        "count": 1000000.0,
+        "mean": 4.346364,
+        "std": 4.193651579020074,
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 4.0,
+        "75%": 6.0,
+        "max": 253.0
+      },
+      "isOriginalTitle": {
+        "count": 1000000.0,
+        "mean": 0.22157,
+        "std": 0.4153033922049128,
+        "min": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "max": 1.0
+      }
+    }
+  },
+  "title.basics.csv": {
+    "rows": 1000000,
+    "columns": 9,
+    "column_names": [
+      "tconst",
+      "titleType",
+      "primaryTitle",
+      "originalTitle",
+      "isAdult",
+      "startYear",
+      "endYear",
+      "runtimeMinutes",
+      "genres"
+    ],
+    "missing_values": {
+      "tconst": 0,
+      "titleType": 0,
+      "primaryTitle": 2,
+      "originalTitle": 2,
+      "isAdult": 0,
+      "startYear": 117954,
+      "endYear": 987319,
+      "runtimeMinutes": 640575,
+      "genres": 43001
+    },
+    "duplicate_rows": 0,
+    "numeric_summary": {
+      "isAdult": {
+        "count": 1000000.0,
+        "mean": 0.032537,
+        "std": 0.17742146180599214,
+        "min": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "max": 1.0
+      },
+      "startYear": {
+        "count": 882046.0,
+        "mean": 2006.732766771801,
+        "std": 20.14939210696655,
+        "min": 1878.0,
+        "25%": 2002.0,
+        "50%": 2014.0,
+        "75%": 2020.0,
+        "max": 2033.0
+      },
+      "endYear": {
+        "count": 12681.0,
+        "mean": 2008.332465893857,
+        "std": 16.335520710772403,
+        "min": 1933.0,
+        "25%": 2001.0,
+        "50%": 2015.0,
+        "75%": 2020.0,
+        "max": 2029.0
+      },
+      "runtimeMinutes": {
+        "count": 359425.0,
+        "mean": 43.93009946442234,
+        "std": 40.57760397541805,
+        "min": 1.0,
+        "25%": 21.0,
+        "50%": 30.0,
+        "75%": 60.0,
+        "max": 1500.0
+      }
+    }
+  },
+  "title.crew.csv": {
+    "rows": 1000000,
+    "columns": 3,
+    "column_names": [
+      "tconst",
+      "directors",
+      "writers"
+    ],
+    "missing_values": {
+      "tconst": 0,
+      "directors": 440078,
+      "writers": 490604
+    },
+    "duplicate_rows": 0,
+    "numeric_summary": {}
+  },
+  "title.episode.csv": {
+    "rows": 1000000,
+    "columns": 4,
+    "column_names": [
+      "tconst",
+      "parentTconst",
+      "seasonNumber",
+      "episodeNumber"
+    ],
+    "missing_values": {
+      "tconst": 0,
+      "parentTconst": 0,
+      "seasonNumber": 206204,
+      "episodeNumber": 206915
+    },
+    "duplicate_rows": 0,
+    "numeric_summary": {
+      "seasonNumber": {
+        "count": 793796.0,
+        "mean": 3.8656783354917383,
+        "std": 23.725719196003297,
+        "min": 1.0,
+        "25%": 1.0,
+        "50%": 1.0,
+        "75%": 3.0,
+        "max": 2023.0
+      },
+      "episodeNumber": {
+        "count": 793085.0,
+        "mean": 450.37306341690993,
+        "std": 1444.5846724648134,
+        "min": 1.0,
+        "25%": 7.0,
+        "50%": 28.0,
+        "75%": 159.0,
+        "max": 80207.0
+      }
+    }
+  },
+  "title.principals.csv": {
+    "rows": 1000000,
+    "columns": 6,
+    "column_names": [
+      "tconst",
+      "ordering",
+      "nconst",
+      "category",
+      "job",
+      "characters"
+    ],
+    "missing_values": {
+      "tconst": 0,
+      "ordering": 0,
+      "nconst": 0,
+      "category": 0,
+      "job": 809085,
+      "characters": 511595
+    },
+    "duplicate_rows": 0,
+    "numeric_summary": {
+      "ordering": {
+        "count": 1000000.0,
+        "mean": 7.041345,
+        "std": 5.168857930729699,
+        "min": 1.0,
+        "25%": 3.0,
+        "50%": 6.0,
+        "75%": 10.0,
+        "max": 56.0
+      }
+    }
+  },
+  "title.ratings.csv": {
+    "rows": 1000000,
+    "columns": 3,
+    "column_names": [
+      "tconst",
+      "averageRating",
+      "numVotes"
+    ],
+    "missing_values": {
+      "tconst": 0,
+      "averageRating": 0,
+      "numVotes": 0
+    },
+    "duplicate_rows": 0,
+    "numeric_summary": {
+      "averageRating": {
+        "count": 1000000.0,
+        "mean": 6.962910599999997,
+        "std": 1.4159922250639727,
+        "min": 1.0,
+        "25%": 6.2,
+        "50%": 7.2,
+        "75%": 7.9,
+        "max": 10.0
+      },
+      "numVotes": {
+        "count": 1000000.0,
+        "mean": 1040.462572,
+        "std": 18296.32662366332,
+        "min": 5.0,
+        "25%": 12.0,
+        "50%": 27.0,
+        "75%": 103.0,
+        "max": 3170251.0
+      }
+    }
+  }
+}

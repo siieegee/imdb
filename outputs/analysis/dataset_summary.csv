@@ -1,0 +1,8 @@
+file,rows,columns,duplicate_rows
+name.basics.csv,1000000,6,0
+title.akas.csv,1000000,8,0
+title.basics.csv,1000000,9,0
+title.crew.csv,1000000,3,0
+title.episode.csv,1000000,4,0
+title.principals.csv,1000000,6,0
+title.ratings.csv,1000000,3,0
