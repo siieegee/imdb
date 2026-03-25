@@ -105,12 +105,14 @@ def plot_votes_distribution(
     log_bins = np.logspace(
         np.log10(votes.min()), np.log10(votes.max()), num=40
     )
+    # Use log-spaced bins for `x` but keep y on a linear scale.
+    # This avoids the confusing "log-log" effect where both axes are powers of 10.
     plt.figure(figsize=(10, 6))
-    plt.hist(votes, bins=log_bins, log=True)
+    plt.hist(votes, bins=log_bins, log=False)
     plt.xscale("log")
-    plt.title("Votes Distribution (Shows/Movies only, Log-Log Scale)")
+    plt.title("Votes Distribution (Shows/Movies only)")
     plt.xlabel("Number of Votes (log scale)")
-    plt.ylabel("Frequency (log scale)")
+    plt.ylabel("Frequency (count)")
     plt.tight_layout()
     plt.savefig(output_dir / "votes_distribution.png", dpi=150)
     plt.close()
