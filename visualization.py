@@ -37,6 +37,17 @@ def plot_start_year_trend(df: pd.DataFrame, output_dir: Path) -> None:
     plt.title("Titles Released Per Year")
     plt.xlabel("Year")
     plt.ylabel("Number of Titles")
+    # Annotate where data becomes incomplete — IMDb entries for recent years
+    # are added retroactively, so counts drop sharply and should not be
+    # interpreted as a real-world decline in production.
+    plt.axvline(x=2023, color="red", linestyle="--", alpha=0.7)
+    plt.text(
+        2023.5,
+        counts.max() * 0.9,
+        "Data incomplete\nbeyond this point",
+        color="red",
+        fontsize=9,
+    )
     plt.tight_layout()
     plt.savefig(output_dir / "titles_per_year.png", dpi=150)
     plt.close()
@@ -59,37 +70,49 @@ def plot_rating_distribution(df: pd.DataFrame, output_dir: Path) -> None:
     plt.close()
 
 
-def plot_votes_distribution(df: pd.DataFrame, output_dir: Path) -> None:
-    if "numVotes" not in df.columns:
+def plot_votes_distribution(
+    ratings_df: pd.DataFrame,
+    output_dir: Path,
+    title_basics: pd.DataFrame | None = None,
+) -> None:
+    """
+    Plot votes distribution for show/movie titles only.
+
+    If `title_basics` is provided, `tvEpisode` is filtered out using `titleType`
+    so this chart is consistent with the other "top rated titles" charts.
+    """
+    if "numVotes" not in ratings_df.columns:
         return
-    votes = pd.to_numeric(df["numVotes"], errors="coerce").dropna()
+
+    votes_source = ratings_df.copy()
+    standalone_types = {"movie", "tvSeries", "tvMiniSeries", "tvMovie"}
+
+    if title_basics is not None and {"tconst", "titleType"}.issubset(title_basics.columns) and {"tconst", "numVotes"}.issubset(votes_source.columns):
+        # Filter out episodes by keeping only show/movie titleTypes.
+        votes_source = votes_source.merge(
+            title_basics[["tconst", "titleType"]],
+            on="tconst",
+            how="left",
+        )
+        votes_source["titleType"] = votes_source["titleType"].astype(str).str.strip()
+        votes_source = votes_source[votes_source["titleType"].isin(standalone_types)]
+
+    votes = pd.to_numeric(votes_source["numVotes"], errors="coerce").dropna()
     votes = votes[votes > 0]
     if votes.empty:
         return
+    import numpy as np
+    log_bins = np.logspace(
+        np.log10(votes.min()), np.log10(votes.max()), num=40
+    )
     plt.figure(figsize=(10, 6))
-    plt.hist(votes, bins=30, log=True)
-    plt.title("Votes Distribution (Log Frequency)")
-    plt.xlabel("Number of Votes")
+    plt.hist(votes, bins=log_bins, log=True)
+    plt.xscale("log")
+    plt.title("Votes Distribution (Shows/Movies only, Log-Log Scale)")
+    plt.xlabel("Number of Votes (log scale)")
     plt.ylabel("Frequency (log scale)")
     plt.tight_layout()
     plt.savefig(output_dir / "votes_distribution.png", dpi=150)
-    plt.close()
-
-
-def plot_runtime_distribution(df: pd.DataFrame, output_dir: Path) -> None:
-    if "runtimeMinutes" not in df.columns:
-        return
-    runtime = pd.to_numeric(df["runtimeMinutes"], errors="coerce").dropna()
-    runtime = runtime[(runtime > 0) & (runtime <= 300)]
-    if runtime.empty:
-        return
-    plt.figure(figsize=(10, 6))
-    plt.hist(runtime, bins=30)
-    plt.title("Runtime Distribution (<= 300 mins)")
-    plt.xlabel("Runtime (minutes)")
-    plt.ylabel("Frequency")
-    plt.tight_layout()
-    plt.savefig(output_dir / "runtime_distribution.png", dpi=150)
     plt.close()
 
 
@@ -116,31 +139,6 @@ def plot_top_genres(df: pd.DataFrame, output_dir: Path) -> None:
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
     plt.savefig(output_dir / "top_genres.png", dpi=150)
-    plt.close()
-
-
-def plot_top_rated_titles(merged_df: pd.DataFrame, output_dir: Path, min_votes: int = 1000) -> None:
-    required = {"primaryTitle", "averageRating", "numVotes"}
-    if not required.issubset(merged_df.columns):
-        return
-
-    frame = merged_df.copy()
-    frame["averageRating"] = pd.to_numeric(frame["averageRating"], errors="coerce")
-    frame["numVotes"] = pd.to_numeric(frame["numVotes"], errors="coerce")
-    frame = frame.dropna(subset=["primaryTitle", "averageRating", "numVotes"])
-    frame = frame[frame["numVotes"] >= min_votes]
-    frame = frame.sort_values(["averageRating", "numVotes"], ascending=[False, False]).head(15)
-    if frame.empty:
-        return
-
-    labels = frame["primaryTitle"].astype(str).str.slice(0, 40)
-    plt.figure(figsize=(12, 8))
-    plt.barh(labels[::-1], frame["averageRating"][::-1])
-    plt.title(f"Top Rated Titles (min {min_votes} votes)")
-    plt.xlabel("Average Rating")
-    plt.ylabel("Title")
-    plt.tight_layout()
-    plt.savefig(output_dir / "top_rated_titles.png", dpi=150)
     plt.close()
 
 
@@ -180,12 +178,13 @@ def run_visualization(input_dir: Path, output_dir: Path) -> None:
         plot_title_type_distribution(title_basics, output_dir)
         plot_start_year_trend(title_basics, output_dir)
         plot_top_genres(title_basics, output_dir)
-        plot_runtime_distribution(title_basics, output_dir)
 
     if title_ratings_path.exists():
         title_ratings = pd.read_csv(title_ratings_path, low_memory=False)
         plot_rating_distribution(title_ratings, output_dir)
-        plot_votes_distribution(title_ratings, output_dir)
+        # Keep this chart consistent with other "titles" charts by filtering
+        # out episode entries (tvEpisode).
+        plot_votes_distribution(title_ratings, output_dir, title_basics=title_basics)
 
     if title_basics is not None and title_ratings is not None:
         merged = title_basics.merge(
@@ -193,7 +192,6 @@ def run_visualization(input_dir: Path, output_dir: Path) -> None:
             on="tconst",
             how="inner",
         )
-        plot_top_rated_titles(merged, output_dir)
         plot_median_rating_by_title_type(merged, output_dir)
 
 
