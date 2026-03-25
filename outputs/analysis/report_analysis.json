@@ -1,0 +1,881 @@
+{
+  "title_type_distribution_top15": {
+    "rows": 10,
+    "data": [
+      {
+        "titleType": "tvEpisode",
+        "count": 771733
+      },
+      {
+        "titleType": "short",
+        "count": 90587
+      },
+      {
+        "titleType": "movie",
+        "count": 59922
+      },
+      {
+        "titleType": "video",
+        "count": 26177
+      },
+      {
+        "titleType": "tvSeries",
+        "count": 24083
+      },
+      {
+        "titleType": "tvMovie",
+        "count": 12336
+      },
+      {
+        "titleType": "tvMiniSeries",
+        "count": 5678
+      },
+      {
+        "titleType": "tvSpecial",
+        "count": 4664
+      },
+      {
+        "titleType": "videoGame",
+        "count": 3897
+      },
+      {
+        "titleType": "tvShort",
+        "count": 923
+      }
+    ]
+  },
+  "titles_per_year_1870_2100": {
+    "rows": 142,
+    "data": [
+      {
+        "startYear": 1878,
+        "count": 3
+      },
+      {
+        "startYear": 1881,
+        "count": 1
+      },
+      {
+        "startYear": 1887,
+        "count": 3
+      },
+      {
+        "startYear": 1888,
+        "count": 3
+      },
+      {
+        "startYear": 1891,
+        "count": 1
+      },
+      {
+        "startYear": 1892,
+        "count": 1
+      },
+      {
+        "startYear": 1894,
+        "count": 12
+      },
+      {
+        "startYear": 1895,
+        "count": 11
+      },
+      {
+        "startYear": 1896,
+        "count": 66
+      },
+      {
+        "startYear": 1897,
+        "count": 100
+      },
+      {
+        "startYear": 1898,
+        "count": 140
+      },
+      {
+        "startYear": 1899,
+        "count": 119
+      },
+      {
+        "startYear": 1900,
+        "count": 148
+      },
+      {
+        "startYear": 1901,
+        "count": 141
+      },
+      {
+        "startYear": 1902,
+        "count": 149
+      },
+      {
+        "startYear": 1903,
+        "count": 219
+      },
+      {
+        "startYear": 1904,
+        "count": 133
+      },
+      {
+        "startYear": 1905,
+        "count": 148
+      },
+      {
+        "startYear": 1906,
+        "count": 150
+      },
+      {
+        "startYear": 1907,
+        "count": 192
+      },
+      {
+        "startYear": 1908,
+        "count": 360
+      },
+      {
+        "startYear": 1909,
+        "count": 422
+      },
+      {
+        "startYear": 1910,
+        "count": 542
+      },
+      {
+        "startYear": 1911,
+        "count": 651
+      },
+      {
+        "startYear": 1912,
+        "count": 695
+      },
+      {
+        "startYear": 1913,
+        "count": 799
+      },
+      {
+        "startYear": 1914,
+        "count": 760
+      },
+      {
+        "startYear": 1915,
+        "count": 669
+      },
+      {
+        "startYear": 1916,
+        "count": 566
+      },
+      {
+        "startYear": 1917,
+        "count": 492
+      },
+      {
+        "startYear": 1918,
+        "count": 388
+      },
+      {
+        "startYear": 1919,
+        "count": 354
+      },
+      {
+        "startYear": 1920,
+        "count": 375
+      },
+      {
+        "startYear": 1921,
+        "count": 331
+      },
+      {
+        "startYear": 1922,
+        "count": 272
+      },
+      {
+        "startYear": 1923,
+        "count": 261
+      },
+      {
+        "startYear": 1924,
+        "count": 261
+      },
+      {
+        "startYear": 1925,
+        "count": 280
+      },
+      {
+        "startYear": 1926,
+        "count": 271
+      },
+      {
+        "startYear": 1927,
+        "count": 288
+      },
+      {
+        "startYear": 1928,
+        "count": 296
+      },
+      {
+        "startYear": 1929,
+        "count": 293
+      },
+      {
+        "startYear": 1930,
+        "count": 313
+      },
+      {
+        "startYear": 1931,
+        "count": 266
+      },
+      {
+        "startYear": 1932,
+        "count": 248
+      },
+      {
+        "startYear": 1933,
+        "count": 224
+      },
+      {
+        "startYear": 1934,
+        "count": 251
+      },
+      {
+        "startYear": 1935,
+        "count": 273
+      },
+      {
+        "startYear": 1936,
+        "count": 275
+      },
+      {
+        "startYear": 1937,
+        "count": 295
+      },
+      {
+        "startYear": 1938,
+        "count": 264
+      },
+      {
+        "startYear": 1939,
+        "count": 267
+      },
+      {
+        "startYear": 1940,
+        "count": 217
+      },
+      {
+        "startYear": 1941,
+        "count": 245
+      },
+      {
+        "startYear": 1942,
+        "count": 221
+      },
+      {
+        "startYear": 1943,
+        "count": 221
+      },
+      {
+        "startYear": 1944,
+        "count": 181
+      },
+      {
+        "startYear": 1945,
+        "count": 169
+      },
+      {
+        "startYear": 1946,
+        "count": 235
+      },
+      {
+        "startYear": 1947,
+        "count": 232
+      },
+      {
+        "startYear": 1948,
+        "count": 329
+      },
+      {
+        "startYear": 1949,
+        "count": 457
+      },
+      {
+        "startYear": 1950,
+        "count": 678
+      },
+      {
+        "startYear": 1951,
+        "count": 923
+      },
+      {
+        "startYear": 1952,
+        "count": 1039
+      },
+      {
+        "startYear": 1953,
+        "count": 1055
+      },
+      {
+        "startYear": 1954,
+        "count": 1552
+      },
+      {
+        "startYear": 1955,
+        "count": 1502
+      },
+      {
+        "startYear": 1956,
+        "count": 1504
+      },
+      {
+        "startYear": 1957,
+        "count": 1745
+      },
+      {
+        "startYear": 1958,
+        "count": 2096
+      },
+      {
+        "startYear": 1959,
+        "count": 2026
+      },
+      {
+        "startYear": 1960,
+        "count": 2220
+      },
+      {
+        "startYear": 1961,
+        "count": 2325
+      },
+      {
+        "startYear": 1962,
+        "count": 2237
+      },
+      {
+        "startYear": 1963,
+        "count": 2565
+      },
+      {
+        "startYear": 1964,
+        "count": 2862
+      },
+      {
+        "startYear": 1965,
+        "count": 3229
+      },
+      {
+        "startYear": 1966,
+        "count": 3207
+      },
+      {
+        "startYear": 1967,
+        "count": 3360
+      },
+      {
+        "startYear": 1968,
+        "count": 3045
+      },
+      {
+        "startYear": 1969,
+        "count": 3561
+      },
+      {
+        "startYear": 1970,
+        "count": 3462
+      },
+      {
+        "startYear": 1971,
+        "count": 3656
+      },
+      {
+        "startYear": 1972,
+        "count": 3634
+      },
+      {
+        "startYear": 1973,
+        "count": 3697
+      },
+      {
+        "startYear": 1974,
+        "count": 3604
+      },
+      {
+        "startYear": 1975,
+        "count": 3592
+      },
+      {
+        "startYear": 1976,
+        "count": 3626
+      },
+      {
+        "startYear": 1977,
+        "count": 3464
+      },
+      {
+        "startYear": 1978,
+        "count": 3403
+      },
+      {
+        "startYear": 1979,
+        "count": 3295
+      },
+      {
+        "startYear": 1980,
+        "count": 3555
+      },
+      {
+        "startYear": 1981,
+        "count": 3430
+      },
+      {
+        "startYear": 1982,
+        "count": 3678
+      },
+      {
+        "startYear": 1983,
+        "count": 3743
+      },
+      {
+        "startYear": 1984,
+        "count": 3903
+      },
+      {
+        "startYear": 1985,
+        "count": 4090
+      },
+      {
+        "startYear": 1986,
+        "count": 4028
+      },
+      {
+        "startYear": 1987,
+        "count": 4214
+      },
+      {
+        "startYear": 1988,
+        "count": 4243
+      },
+      {
+        "startYear": 1989,
+        "count": 4632
+      },
+      {
+        "startYear": 1990,
+        "count": 4966
+      },
+      {
+        "startYear": 1991,
+        "count": 4842
+      },
+      {
+        "startYear": 1992,
+        "count": 5152
+      },
+      {
+        "startYear": 1993,
+        "count": 5521
+      },
+      {
+        "startYear": 1994,
+        "count": 5912
+      },
+      {
+        "startYear": 1995,
+        "count": 6574
+      },
+      {
+        "startYear": 1996,
+        "count": 6767
+      },
+      {
+        "startYear": 1997,
+        "count": 7343
+      },
+      {
+        "startYear": 1998,
+        "count": 7993
+      },
+      {
+        "startYear": 1999,
+        "count": 8398
+      },
+      {
+        "startYear": 2000,
+        "count": 8723
+      },
+      {
+        "startYear": 2001,
+        "count": 9660
+      },
+      {
+        "startYear": 2002,
+        "count": 10274
+      },
+      {
+        "startYear": 2003,
+        "count": 10996
+      },
+      {
+        "startYear": 2004,
+        "count": 12426
+      },
+      {
+        "startYear": 2005,
+        "count": 13857
+      },
+      {
+        "startYear": 2006,
+        "count": 15077
+      },
+      {
+        "startYear": 2007,
+        "count": 16869
+      },
+      {
+        "startYear": 2008,
+        "count": 18169
+      },
+      {
+        "startYear": 2009,
+        "count": 18948
+      },
+      {
+        "startYear": 2010,
+        "count": 21657
+      },
+      {
+        "startYear": 2011,
+        "count": 24248
+      },
+      {
+        "startYear": 2012,
+        "count": 27807
+      },
+      {
+        "startYear": 2013,
+        "count": 29515
+      },
+      {
+        "startYear": 2014,
+        "count": 31589
+      },
+      {
+        "startYear": 2015,
+        "count": 33376
+      },
+      {
+        "startYear": 2016,
+        "count": 35619
+      },
+      {
+        "startYear": 2017,
+        "count": 37501
+      },
+      {
+        "startYear": 2018,
+        "count": 38414
+      },
+      {
+        "startYear": 2019,
+        "count": 37652
+      },
+      {
+        "startYear": 2020,
+        "count": 36206
+      },
+      {
+        "startYear": 2021,
+        "count": 42431
+      },
+      {
+        "startYear": 2022,
+        "count": 41331
+      },
+      {
+        "startYear": 2023,
+        "count": 39048
+      },
+      {
+        "startYear": 2024,
+        "count": 36457
+      },
+      {
+        "startYear": 2025,
+        "count": 30597
+      },
+      {
+        "startYear": 2026,
+        "count": 5839
+      },
+      {
+        "startYear": 2027,
+        "count": 55
+      },
+      {
+        "startYear": 2028,
+        "count": 7
+      },
+      {
+        "startYear": 2033,
+        "count": 1
+      }
+    ]
+  },
+  "rating_distribution": {
+    "count": 1000000,
+    "min": 1.0,
+    "max": 10.0,
+    "bin_edges": [
+      1.0,
+      1.45,
+      1.9,
+      2.35,
+      2.8,
+      3.25,
+      3.7,
+      4.15,
+      4.6,
+      5.05,
+      5.5,
+      5.95,
+      6.4,
+      6.8500000000000005,
+      7.3,
+      7.75,
+      8.2,
+      8.65,
+      9.1,
+      9.55,
+      10.0
+    ],
+    "bin_counts": [
+      2759,
+      1654,
+      3196,
+      3814,
+      7848,
+      8735,
+      15201,
+      18135,
+      33557,
+      38840,
+      67727,
+      77943,
+      125633,
+      123561,
+      167883,
+      119047,
+      99526,
+      44588,
+      27491,
+      12862
+    ],
+    "quantiles": {
+      "0.5": 7.2,
+      "0.9": 8.6,
+      "0.95": 9.0,
+      "0.99": 9.6
+    }
+  },
+  "votes_distribution": {
+    "count": 25755,
+    "min": 5.0,
+    "max": 1774212.0,
+    "bin_edges": [
+      5.000000000000001,
+      6.93870792875805,
+      9.629133544121965,
+      13.362749053933829,
+      18.544042562106956,
+      25.73433903138365,
+      35.71261245568189,
+      49.559877440580685,
+      68.77630290904688,
+      95.44373566113376,
+      132.45124107643923,
+      183.80809532618653,
+      255.07813768194515,
+      353.98253927731,
+      491.23629038507573,
+      681.7090285977232,
+      946.0359683673939,
+      1312.853454920227,
+      1821.9013353904754,
+      2528.328248257754,
+      3508.666252537805,
+      4869.122069169972,
+      6757.083181488096,
+      9377.085329333822,
+      13012.971264657876,
+      18058.64137815645,
+      25060.72762264247,
+      34777.81389113503,
+      48262.618598258094,
+      66976.04286607182,
+      92945.4399343303,
+      128984.25220284853,
+      178996.8106889666,
+      248401.31790998718,
+      344716.83881919534,
+      478377.89253823226,
+      663864.8951795195,
+      921272.9223612527,
+      1278488.7461876245,
+      1774212.0000000014
+    ],
+    "bin_counts": [
+      301,
+      1742,
+      2392,
+      2300,
+      2132,
+      1961,
+      1802,
+      1598,
+      1551,
+      1323,
+      1193,
+      1048,
+      1037,
+      801,
+      716,
+      691,
+      517,
+      449,
+      374,
+      295,
+      250,
+      192,
+      176,
+      143,
+      127,
+      88,
+      79,
+      77,
+      62,
+      61,
+      44,
+      27,
+      32,
+      19,
+      13,
+      7,
+      3,
+      4,
+      2
+    ],
+    "quantiles": {
+      "0.5": 51.0,
+      "0.9": 1268.0,
+      "0.95": 4084.5999999999985,
+      "0.99": 52609.15999999996,
+      "0.999": 372113.8880000382
+    }
+  },
+  "top_genres_top15": {
+    "rows": 15,
+    "data": [
+      {
+        "genre": "Drama",
+        "count": 279360
+      },
+      {
+        "genre": "Comedy",
+        "count": 192852
+      },
+      {
+        "genre": "Talk-Show",
+        "count": 124093
+      },
+      {
+        "genre": "Short",
+        "count": 106215
+      },
+      {
+        "genre": "News",
+        "count": 100534
+      },
+      {
+        "genre": "Documentary",
+        "count": 95286
+      },
+      {
+        "genre": "Romance",
+        "count": 92572
+      },
+      {
+        "genre": "Family",
+        "count": 73103
+      },
+      {
+        "genre": "Reality-TV",
+        "count": 55920
+      },
+      {
+        "genre": "Animation",
+        "count": 49847
+      },
+      {
+        "genre": "Action",
+        "count": 42155
+      },
+      {
+        "genre": "Crime",
+        "count": 41835
+      },
+      {
+        "genre": "Adventure",
+        "count": 38889
+      },
+      {
+        "genre": "Game-Show",
+        "count": 38117
+      },
+      {
+        "genre": "Music",
+        "count": 36010
+      }
+    ]
+  },
+  "median_rating_by_title_type_top15": {
+    "rows": 10,
+    "data": [
+      {
+        "titleType": "tvEpisode",
+        "medianAverageRating": 7.7
+      },
+      {
+        "titleType": "videoGame",
+        "medianAverageRating": 7.4
+      },
+      {
+        "titleType": "tvMiniSeries",
+        "medianAverageRating": 7.2
+      },
+      {
+        "titleType": "tvSeries",
+        "medianAverageRating": 7.1
+      },
+      {
+        "titleType": "tvShort",
+        "medianAverageRating": 7.1
+      },
+      {
+        "titleType": "tvSpecial",
+        "medianAverageRating": 7.0
+      },
+      {
+        "titleType": "short",
+        "medianAverageRating": 6.4
+      },
+      {
+        "titleType": "video",
+        "medianAverageRating": 6.3
+      },
+      {
+        "titleType": "tvMovie",
+        "medianAverageRating": 6.2
+      },
+      {
+        "titleType": "movie",
+        "medianAverageRating": 6.1
+      }
+    ]
+  }
+}
