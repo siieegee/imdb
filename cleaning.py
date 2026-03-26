@@ -9,6 +9,7 @@ import pandas as pd
 INPUT_DIR = Path("dataset/imdb_datasets")
 OUTPUT_DIR = Path("dataset/cleaned_datasets")
 REPORT_PATH = Path("dataset/cleaning_report.json")
+ANALYSIS_OUTPUT_DIR = Path("outputs/analysis")
 
 
 def normalize_nulls(df: pd.DataFrame) -> pd.DataFrame:
@@ -185,6 +186,60 @@ def run_cleaning(input_dir: Path, output_dir: Path, report_path: Path) -> None:
         json.dump(report, f, indent=2)
 
 
+def safe_describe(df: pd.DataFrame) -> dict:
+    """Build numeric summary stats for a dataframe."""
+    numeric = df.select_dtypes(include=["number"])
+    if numeric.empty:
+        return {}
+    desc = numeric.describe().transpose()
+    return {
+        column: {k: float(v) for k, v in stats.to_dict().items()}
+        for column, stats in desc.iterrows()
+    }
+
+
+def analyze_file(file_path: Path) -> dict:
+    """Analyze one cleaned CSV file and return metadata/stats."""
+    df = pd.read_csv(file_path, low_memory=False)
+    return {
+        "rows": int(df.shape[0]),
+        "columns": int(df.shape[1]),
+        "column_names": list(df.columns),
+        "missing_values": {k: int(v) for k, v in df.isna().sum().to_dict().items()},
+        "duplicate_rows": int(df.duplicated().sum()),
+        "numeric_summary": safe_describe(df),
+    }
+
+
+def run_analysis(input_dir: Path, output_dir: Path) -> None:
+    """Analyze all cleaned CSV files and write analysis artifacts."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    report = {}
+    csv_files = sorted(input_dir.glob("*.csv"))
+    if not csv_files:
+        raise FileNotFoundError(f"No CSV files found in: {input_dir}")
+
+    for csv_file in csv_files:
+        report[csv_file.name] = analyze_file(csv_file)
+
+    report_path = output_dir / "analysis_report.json"
+    with open(report_path, "w", encoding="utf-8") as fp:
+        json.dump(report, fp, indent=2)
+
+    summary_rows = []
+    for filename, details in report.items():
+        summary_rows.append(
+            {
+                "file": filename,
+                "rows": details["rows"],
+                "columns": details["columns"],
+                "duplicate_rows": details["duplicate_rows"],
+            }
+        )
+    pd.DataFrame(summary_rows).to_csv(output_dir / "dataset_summary.csv", index=False)
+
+
 def parse_args() -> argparse.Namespace:
     """Parse command-line options for input/output/report paths."""
     parser = argparse.ArgumentParser(description="Clean IMDb CSV datasets.")
@@ -206,9 +261,23 @@ def parse_args() -> argparse.Namespace:
         default=REPORT_PATH,
         help=f"Path to write JSON cleaning report (default: {REPORT_PATH})",
     )
+    parser.add_argument(
+        "--analysis-output-dir",
+        type=Path,
+        default=ANALYSIS_OUTPUT_DIR,
+        help=f"Directory to write analysis outputs (default: {ANALYSIS_OUTPUT_DIR})",
+    )
+    parser.add_argument(
+        "--skip-analysis",
+        action="store_true",
+        help="Skip running post-cleaning analysis step.",
+    )
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = parse_args()
     run_cleaning(args.input_dir, args.output_dir, args.report_path)
+    if not args.skip_analysis:
+        # Analyze the freshly cleaned datasets.
+        run_analysis(args.output_dir, args.analysis_output_dir)
