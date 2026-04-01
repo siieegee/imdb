@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cineMatch — Movies Like This</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── SKIP LINK ── -->
+  <a href="#homeSection" class="skip-link">Skip to main content</a>
+
+  <!-- ── HEADER / NAV ── -->
+  <header role="banner">
+    <div class="logo" aria-label="cineMatch — by ML">cineMatch</div>
+
+    <nav class="site-nav" aria-label="Site navigation">
+      <button class="nav-link active" onclick="showSection('home')"      aria-current="page"  data-section="home">Home</button>
+      <button class="nav-link"        onclick="showSection('how-to-use')" data-section="how-to-use">How to Use</button>
+      <button class="nav-link"        onclick="showSection('about')"      data-section="about">About Us</button>
+    </nav>
+
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       SECTION: HOME
+  ══════════════════════════════════════════ -->
+  <div id="homeSection" class="page-section active" role="region" aria-label="Home">
+
+    <!-- ── HERO + SEARCH ── -->
+    <div class="hero" id="heroSection">
+      <p class="hero-eyebrow" aria-hidden="true">Powered by Group 2</p>
+      <h1>Find movies <em>just like</em> the ones you love</h1>
+      <p>Where your last movie leads to the next</p>
+
+      <div class="search-wrap" role="search">
+        <label for="searchInput" class="sr-only">Search for a movie title</label>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search a movie title…"
+          autocomplete="off"
+          aria-label="Search for a movie title"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-controls="dropdown"
+          aria-autocomplete="list"
+          role="combobox"
+        />
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <div class="dropdown" id="dropdown" role="listbox" aria-label="Movie search results"></div>
+      </div>
+    </div>
+
+    <!-- ── CLUSTER BROWSER ── -->
+    <nav class="clusters-nav" id="clustersNav" aria-label="Browse movies by cluster">
+      <p class="clusters-label" id="clusters-label">Browse by cluster</p>
+      <div class="clusters-row" id="clustersRow" role="group" aria-labelledby="clusters-label"></div>
+    </nav>
+
+    <!-- ── RESULTS SECTION ── -->
+    <main class="main" id="mainSection" aria-label="Movie recommendations">
+
+      <section class="selected-panel" id="selectedPanel" aria-label="Selected movie"></section>
+      <section class="why-panel"      id="whyPanel"      aria-label="Cluster feature profile"></section>
+
+      <div class="results-header">
+        <h2 class="results-title" id="resultsTitle">Similar titles</h2>
+        <span class="results-count" id="resultsCount" aria-live="polite" aria-atomic="true"></span>
+      </div>
+
+      <div class="sort-row" role="group" aria-label="Sort results by">
+        <button class="sort-btn active" onclick="sortCards('match', this)" aria-pressed="true">Best match</button>
+        <button class="sort-btn"        onclick="sortCards('rating',this)" aria-pressed="false">Highest rated</button>
+        <button class="sort-btn"        onclick="sortCards('year',  this)" aria-pressed="false">Most recent</button>
+        <button class="sort-btn"        onclick="sortCards('votes', this)" aria-pressed="false">Most popular</button>
+      </div>
+
+      <div class="movies-grid" id="moviesGrid" role="list" aria-label="Similar movies"></div>
+
+    </main>
+
+  </div><!-- /homeSection -->
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION: HOW TO USE
+  ══════════════════════════════════════════ -->
+  <div id="how-to-useSection" class="page-section" role="region" aria-label="How to use cineMatch" hidden>
+
+    <div class="info-page">
+      <p class="hero-eyebrow">Guide</p>
+      <h1>How to <em>use</em> cineMatch</h1>
+      <p class="info-lead">Finding your next favourite film takes just a few seconds. Here's everything you need to know.</p>
+
+      <div class="steps-grid">
+
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-icon" aria-hidden="true">🔍</div>
+          <h3>Search a movie</h3>
+          <p>Type any title into the search bar on the Home page. Results appear instantly as you type — select one to get started.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-icon" aria-hidden="true">🧬</div>
+          <h3>Explore its cluster</h3>
+          <p>Every movie is assigned to a group based on runtime, release year, vote count, and rating. The <em>feature profile</em> panel shows exactly where your film sits within its group.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-icon" aria-hidden="true">🎬</div>
+          <h3>Discover similar titles</h3>
+          <p>Up to 12 recommendations appear below, sorted by match score. A same-group bonus rewards films that share the same cinematic DNA.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">04</div>
+          <div class="step-icon" aria-hidden="true">🎛️</div>
+          <h3>Sort & refine</h3>
+          <p>Use the sort buttons to reorder by <strong>Best match</strong>, <strong>Highest rated</strong>, <strong>Most recent</strong>, or <strong>Most popular</strong> — whatever matters to you.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">05</div>
+          <div class="step-icon" aria-hidden="true">🗂️</div>
+          <h3>Browse by cluster</h3>
+          <p>Not sure where to start? Use the cluster chips below the search bar to browse all movies in a category — Blockbuster Spectacles, Arthouse & Indie, and more.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">06</div>
+          <div class="step-icon" aria-hidden="true">🔁</div>
+          <h3>Go deeper</h3>
+          <p>Click any recommendation card to make <em>it</em> the new selected movie and instantly discover a fresh set of similar titles.</p>
+        </div>
+
+      </div>
+
+      <div class="info-tip" role="note">
+        <span class="tip-label" aria-hidden="true">💡 Tip</span>
+        <p>Use your keyboard to navigate — <kbd>↑</kbd> <kbd>↓</kbd> in the search dropdown, <kbd>Enter</kbd> to select, and <kbd>Esc</kbd> to close.</p>
+      </div>
+
+    </div>
+
+  </div><!-- /how-to-useSection -->
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION: ABOUT
+  ══════════════════════════════════════════ -->
+  <div id="aboutSection" class="page-section" role="region" aria-label="About cineMatch" hidden>
+
+    <div class="info-page">
+      <p class="hero-eyebrow">About Us</p>
+      <h1>Behind <em>cineMatch</em></h1>
+
+      <p class="info-lead">
+        cineMatch is a movie recommendation system that helps users discover films similar to their favorites. 
+        It uses machine learning techniques to analyze movie features such as ratings, runtime, popularity, and release year. 
+        By grouping movies into clusters, the system identifies patterns and similarities between titles. 
+        This allows users to quickly explore and find new movies that match their preferences.
+      </p>
+
+      <div class="about-grid">
+
+        <div class="about-block">
+          <h3>The Dataset</h3>
+          <p>cineMatch is built on the <strong>IMDB public dataset</strong>, covering thousands of films across decades. Three tables are combined — title basics, ratings, and name metadata — to form a rich feature matrix for each title.</p>
+        </div>
+
+        <div class="about-block">
+          <h3>The Model</h3>
+          <p>Movies are grouped using <strong>K-Means clustering</strong> (k=5), trained on four normalised features: runtime in minutes, release year, number of votes, and average rating. The model is implemented with <strong>scikit-learn</strong> and evaluated using Silhouette Score, Davies-Bouldin Index, and Calinski-Harabasz Index.</p>
+        </div>
+
+        <div class="about-block">
+          <h3>Group Overview</h3>
+          <ul class="cluster-about-list" aria-label="Cluster descriptions">
+            <li><span class="cab-dot" style="background:#7b6bb5"></span><strong>Short cult classics</strong> — compact runtime, high cultural footprint</li>
+            <li><span class="cab-dot" style="background:#c9a84c"></span><strong>Epic prestige dramas</strong> — long runtime, high votes &amp; rating</li>
+            <li><span class="cab-dot" style="background:#4a9e8a"></span><strong>Mainstream crowd-pleasers</strong> — broad appeal, strong vote counts</li>
+            <li><span class="cab-dot" style="background:#c46a4a"></span><strong>Arthouse &amp; indie</strong> — lower votes, distinctive aesthetic</li>
+            <li><span class="cab-dot" style="background:#9e6fb5"></span><strong>Blockbuster spectacles</strong> — modern, long, massively popular</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div><!-- /aboutSection -->
+
+  <script src="app.js"></script>
+</body>
+</html>
