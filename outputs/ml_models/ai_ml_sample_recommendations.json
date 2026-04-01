@@ -1,0 +1,186 @@
+{
+  "best_model": "random_forest",
+  "top_n": 20,
+  "recommendations": [
+    {
+      "tconst": "tt4283088",
+      "primaryTitle": "Battle of the Bastards",
+      "genres": "Action,Adventure,Drama",
+      "averageRating": 9.9,
+      "numVotes": 303626,
+      "startYear": 2016.0,
+      "predicted_score": 0.9048884257654126
+    },
+    {
+      "tconst": "tt18953204",
+      "primaryTitle": "The Dawn of Humanity",
+      "genres": "Action,Adventure,Animation",
+      "averageRating": 9.6,
+      "numVotes": 50909,
+      "startYear": 2022.0,
+      "predicted_score": 0.8624853324136856
+    },
+    {
+      "tconst": "tt9313978",
+      "primaryTitle": "Victory and Death",
+      "genres": "Action,Adventure,Animation",
+      "averageRating": 9.9,
+      "numVotes": 23497,
+      "startYear": 2020.0,
+      "predicted_score": 0.8595195980976698
+    },
+    {
+      "tconst": "tt14134628",
+      "primaryTitle": "Sole Salvation",
+      "genres": "Action,Adventure,Animation",
+      "averageRating": 9.5,
+      "numVotes": 45551,
+      "startYear": 2021.0,
+      "predicted_score": 0.8568190402370827
+    },
+    {
+      "tconst": "tt0266543",
+      "primaryTitle": "Finding Nemo",
+      "genres": "Adventure,Animation,Comedy",
+      "averageRating": 8.2,
+      "numVotes": 1201837,
+      "startYear": 2003.0,
+      "predicted_score": 0.8508225455274117
+    },
+    {
+      "tconst": "tt36351472",
+      "primaryTitle": "Cats and Mouse",
+      "genres": "Crime,Drama,Thriller",
+      "averageRating": 9.5,
+      "numVotes": 37443,
+      "startYear": 2025.0,
+      "predicted_score": 0.8491412682057192
+    },
+    {
+      "tconst": "tt1520211",
+      "primaryTitle": "The Walking Dead",
+      "genres": "Drama,Horror,Thriller",
+      "averageRating": 8.1,
+      "numVotes": 1189770,
+      "startYear": 2010.0,
+      "predicted_score": 0.8461015206257828
+    },
+    {
+      "tconst": "tt9632460",
+      "primaryTitle": "A Fist of Divine Speed! Another Gear Four Application Activated!",
+      "genres": "Action,Adventure,Animation",
+      "averageRating": 9.7,
+      "numVotes": 21553,
+      "startYear": 2019.0,
+      "predicted_score": 0.844672316989405
+    },
+    {
+      "tconst": "tt0898266",
+      "primaryTitle": "The Big Bang Theory",
+      "genres": "Comedy,Romance",
+      "averageRating": 8.1,
+      "numVotes": 933532,
+      "startYear": 2007.0,
+      "predicted_score": 0.8435879013943428
+    },
+    {
+      "tconst": "tt2106476",
+      "primaryTitle": "The Hunt",
+      "genres": "Drama",
+      "averageRating": 8.3,
+      "numVotes": 406787,
+      "startYear": 2012.0,
+      "predicted_score": 0.8284072996612406
+    },
+    {
+      "tconst": "tt0121220",
+      "primaryTitle": "Dragon Ball Z",
+      "genres": "Action,Adventure,Animation",
+      "averageRating": 8.8,
+      "numVotes": 103170,
+      "startYear": 1989.0,
+      "predicted_score": 0.8248939861139845
+    },
+    {
+      "tconst": "tt2825724",
+      "primaryTitle": "To You, in 2000 Years: The Fall of Shiganshina, Part 1",
+      "genres": "Action,Adventure,Animation",
+      "averageRating": 9.2,
+      "numVotes": 50976,
+      "startYear": 2013.0,
+      "predicted_score": 0.8228939524600911
+    },
+    {
+      "tconst": "tt5218434",
+      "primaryTitle": "Fish Out of Water",
+      "genres": "Animation,Comedy,Drama",
+      "averageRating": 9.6,
+      "numVotes": 16001,
+      "startYear": 2016.0,
+      "predicted_score": 0.8206835395677097
+    },
+    {
+      "tconst": "tt1832382",
+      "primaryTitle": "A Separation",
+      "genres": "Drama",
+      "averageRating": 8.3,
+      "numVotes": 276829,
+      "startYear": 2011.0,
+      "predicted_score": 0.8202341236523175
+    },
+    {
+      "tconst": "tt0095953",
+      "primaryTitle": "Rain Man",
+      "genres": "Drama",
+      "averageRating": 8.0,
+      "numVotes": 582960,
+      "startYear": 1988.0,
+      "predicted_score": 0.8161517461687917
+    },
+    {
+      "tconst": "tt0053291",
+      "primaryTitle": "Some Like It Hot",
+      "genres": "Comedy,Music,Romance",
+      "averageRating": 8.2,
+      "numVotes": 303807,
+      "startYear": 1959.0,
+      "predicted_score": 0.8151639987707812
+    },
+    {
+      "tconst": "tt0057115",
+      "primaryTitle": "The Great Escape",
+      "genres": "Adventure,Drama,Thriller",
+      "averageRating": 8.2,
+      "numVotes": 276581,
+      "startYear": 1963.0,
+      "predicted_score": 0.8145227828848394
+    },
+    {
+      "tconst": "tt0063929",
+      "primaryTitle": "Monty Python's Flying Circus",
+      "genres": "Comedy",
+      "averageRating": 8.8,
+      "numVotes": 87087,
+      "startYear": 1969.0,
+      "predicted_score": 0.8144700376747595
+    },
+    {
+      "tconst": "tt6791350",
+      "primaryTitle": "Guardians of the Galaxy Vol. 3",
+      "genres": "Action,Adventure,Comedy",
+      "averageRating": 7.9,
+      "numVotes": 466392,
+      "startYear": 2023.0,
+      "predicted_score": 0.8098952325349243
+    },
+    {
+      "tconst": "tt7908628",
+      "primaryTitle": "What We Do in the Shadows",
+      "genres": "Comedy,Fantasy,Horror",
+      "averageRating": 8.5,
+      "numVotes": 125821,
+      "startYear": 2019.0,
+      "predicted_score": 0.8066951498647357
+    }
+  ]
+}
